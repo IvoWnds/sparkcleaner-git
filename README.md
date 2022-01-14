@@ -1,4 +1,4 @@
-# pyspark-df-cleaner
+# sparkcleaner
 Making life easier. This package is used for cleaning Pyspark dataframes. The module will be extended in the future.
 
 It currently consists of two main features:
