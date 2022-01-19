@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="sparkcleaner",
-    version="1.0.1",
+    version="1.1.0",
     author="IvoW",
     author_email="ivownds@gmail.com",
     description="cleaning functions for pyspark df",
@@ -22,5 +22,5 @@ setuptools.setup(
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
-    python_requires=">=3.7",
+    python_requires=">=3.6",
 )

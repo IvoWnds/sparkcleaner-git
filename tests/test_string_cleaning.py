@@ -36,6 +36,14 @@ class StringCleanTester(unittest.TestCase):
         self.assertEqual(trans_df.filter(F.col("MATERIAL")
                                           .startswith("00")).count(), 0)
 
+    def test_keep_alphanumeric_string(self):
+        """Check that keep_alphanumeric_string function works, spaces are allowed"""
+        trans_df = scsclean.keep_alphanumeric_string(self.test_df, "MATERIAL_DESCRIPTION")
+        self.assertEqual(trans_df.filter(
+            F.col("MATERIAL_DESCRIPTION")
+            .rlike(r"[^A-Za-z0-9 ]"))
+            .count(), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
