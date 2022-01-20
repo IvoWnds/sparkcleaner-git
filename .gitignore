@@ -1,5 +1,4 @@
 venv
 run_checks_tests.ps1
-workspace.code-workspace
 setup.py
 .gitignore
